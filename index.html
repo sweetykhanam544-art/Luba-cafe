@@ -28,29 +28,32 @@
     }
 
 
-    /* HEADER */
+    /* ================= HEADER ================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(61, 47, 40, 0.97);
+      background: #3d2f28;
       color: white;
       padding: 18px 20px;
     }
 
 
     .nav {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 20px;
     }
 
 
     .logo {
+      font-family: Georgia, serif;
       font-size: 22px;
       font-weight: bold;
       letter-spacing: 2px;
@@ -61,287 +64,440 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 16px;
+      margin-left: 18px;
       font-size: 14px;
+      transition: 0.3s;
     }
 
 
     nav a:hover {
-      opacity: 0.7;
+      opacity: 0.65;
     }
 
 
-    /* HERO */
+    /* ================= HERO ================= */
 
     .hero {
+
       min-height: 88vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 60px 20px;
+
+      padding: 80px 20px;
 
       background:
         linear-gradient(
-          rgba(61, 47, 40, 0.55),
-          rgba(61, 47, 40, 0.55)
+          rgba(61,47,40,0.60),
+          rgba(61,47,40,0.60)
         ),
-        linear-gradient(
-          135deg,
-          #cdbda7,
-          #8d7864
-        );
+        url("thanos-pal-buBWIBoYVuY-unsplash.jpg");
+
+      background-size: cover;
+      background-position: center;
 
       color: white;
     }
 
 
     .hero-content {
-      max-width: 750px;
+      max-width: 760px;
     }
 
 
     .small-title {
+
       text-transform: uppercase;
+
       letter-spacing: 4px;
-      font-size: 13px;
-      margin-bottom: 15px;
+
+      font-size: 12px;
+
+      margin-bottom: 18px;
     }
 
 
     .hero h1 {
+
       font-family: Georgia, serif;
-      font-size: 58px;
-      line-height: 1.1;
-      margin-bottom: 20px;
+
+      font-size: 64px;
+
+      line-height: 1.08;
+
+      margin-bottom: 22px;
     }
 
 
     .hero p {
+
       font-size: 18px;
-      margin-bottom: 30px;
+
+      max-width: 600px;
+
+      margin: 0 auto 30px;
     }
 
 
-    /* BUTTONS */
+    /* ================= BUTTONS ================= */
 
     .button {
+
       display: inline-block;
+
       padding: 13px 25px;
+
       margin: 5px;
+
       border-radius: 30px;
+
       text-decoration: none;
+
       background: white;
+
       color: #3d2f28;
+
       font-weight: bold;
+
       transition: 0.3s;
     }
 
 
     .button:hover {
-      transform: translateY(-2px);
+
+      transform: translateY(-3px);
+
     }
 
 
     .button.dark {
+
       background: #3d2f28;
+
       color: white;
+
     }
 
 
-    /* SECTIONS */
+    /* ================= SECTIONS ================= */
 
     section {
-      max-width: 1100px;
+
+      max-width: 1150px;
+
       margin: auto;
-      padding: 80px 20px;
+
+      padding: 90px 25px;
     }
 
 
     .section-heading {
+
       text-align: center;
+
       margin-bottom: 45px;
     }
 
 
     .section-heading span {
+
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
+
+      letter-spacing: 4px;
+
+      font-size: 11px;
+
       opacity: 0.6;
     }
 
 
     .section-heading h2 {
+
       font-family: Georgia, serif;
-      font-size: 38px;
+
+      font-size: 42px;
+
       margin-top: 8px;
     }
 
 
-    /* MENU */
+    /* ================= MENU ================= */
 
     .menu {
+
       display: grid;
+
       grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
+        repeat(3, 1fr);
 
       gap: 22px;
     }
 
 
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 18px;
-      text-align: center;
+    .food-card {
+
+      background: #eee4d5;
+
+      border-radius: 20px;
+
+      overflow: hidden;
 
       box-shadow:
-        0 8px 25px rgba(61, 47, 40, 0.08);
+        0 8px 25px rgba(61,47,40,0.08);
 
       transition: 0.3s;
     }
 
 
-    .card:hover {
+    .food-card:hover {
+
       transform: translateY(-5px);
+
     }
 
 
-    .icon {
-      font-size: 38px;
-      margin-bottom: 12px;
+    .food-photo {
+
+      height: 210px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 70px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d8c3aa,
+          #b79c7e
+        );
     }
 
 
-    .card h3 {
+    .food-info {
+
+      padding: 22px;
+
+    }
+
+
+    .food-info h3 {
+
       font-family: Georgia, serif;
-      font-size: 22px;
-      margin-bottom: 8px;
+
+      font-size: 23px;
+
+      margin-bottom: 7px;
     }
 
 
-    .card p {
+    .food-info p {
+
       font-size: 14px;
-      opacity: 0.75;
+
+      opacity: 0.72;
     }
 
 
     .price {
+
       margin-top: 14px;
+
       font-weight: bold;
+
       font-size: 18px;
     }
 
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
 
-    .about-box {
+    .about {
+
       background: #e8ddcd;
-      border-radius: 25px;
-      padding: 55px 30px;
+
+      border-radius: 28px;
+
+      padding: 65px 30px;
+
       text-align: center;
-      max-width: 800px;
-      margin: auto;
+
     }
 
 
-    .about-box p {
-      max-width: 650px;
+    .about p {
+
+      max-width: 700px;
+
       margin: auto;
+
       font-size: 16px;
     }
 
 
-    /* GALLERY */
+    /* ================= GALLERY ================= */
 
     .gallery {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
     }
 
 
     .gallery-item {
-      height: 190px;
-      border-radius: 18px;
+
+      height: 210px;
+
+      border-radius: 20px;
+
       overflow: hidden;
+
       background: #d8c8b5;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      font-size: 55px;
+      font-size: 65px;
     }
 
 
     .gallery-item img {
+
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
+
       display: block;
     }
 
 
-    /* CONTACT */
+    /* ================= CONTACT ================= */
 
     .contact {
-      text-align: center;
+
       background: #e8ddcd;
-      border-radius: 25px;
-      padding: 60px 20px;
+
+      border-radius: 28px;
+
+      padding: 65px 25px;
+
+      text-align: center;
     }
 
 
     .contact p {
+
       margin: 8px 0;
+
     }
 
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
 
     footer {
+
       background: #3d2f28;
+
       color: white;
+
       text-align: center;
-      padding: 30px 20px;
+
+      padding: 35px 20px;
+
       font-size: 14px;
     }
 
 
-    /* MOBILE */
+    footer strong {
 
-    @media (max-width: 700px) {
+      font-family: Georgia, serif;
+
+      font-size: 18px;
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 750px) {
+
 
       .nav {
+
         flex-direction: column;
+
+      }
+
+
+      nav {
+
+        text-align: center;
+
       }
 
 
       nav a {
+
         margin: 0 5px;
+
         font-size: 13px;
+
+      }
+
+
+      .hero {
+
+        min-height: 80vh;
+
       }
 
 
       .hero h1 {
-        font-size: 43px;
+
+        font-size: 44px;
+
       }
 
 
       .hero p {
+
         font-size: 16px;
+
+      }
+
+
+      .menu {
+
+        grid-template-columns: 1fr;
+
       }
 
 
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
       }
 
 
       .gallery-item {
-        height: 150px;
+
+        height: 160px;
+
       }
 
     }
@@ -354,7 +510,7 @@
 <body>
 
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
 
   <header>
 
@@ -385,7 +541,7 @@
 
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
 
   <section class="hero" id="home">
 
@@ -397,7 +553,7 @@
 
 
       <h1>
-        Your little corner<br>
+        Your little corner
         of calm.
       </h1>
 
@@ -423,9 +579,10 @@
 
 
 
-  <!-- MENU -->
+  <!-- ================= MENU ================= -->
 
   <section id="menu">
+
 
     <div class="section-heading">
 
@@ -439,108 +596,144 @@
     <div class="menu">
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">☕</div>
+        <div class="food-photo">
+          ☕
+        </div>
 
-        <h3>Cappuccino</h3>
+        <div class="food-info">
 
-        <p>
-          Rich espresso topped with smooth creamy foam.
-        </p>
+          <h3>Cappuccino</h3>
 
-        <div class="price">
-          ₹140
+          <p>
+            Rich espresso topped with smooth creamy foam.
+          </p>
+
+          <div class="price">
+            ₹140
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">🥛</div>
+        <div class="food-photo">
+          🥛
+        </div>
 
-        <h3>Café Latte</h3>
+        <div class="food-info">
 
-        <p>
-          Silky steamed milk blended with smooth espresso.
-        </p>
+          <h3>Café Latte</h3>
 
-        <div class="price">
-          ₹150
+          <p>
+            Silky steamed milk blended with smooth espresso.
+          </p>
+
+          <div class="price">
+            ₹150
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">🍫</div>
+        <div class="food-photo">
+          🍫
+        </div>
 
-        <h3>Mocha</h3>
+        <div class="food-info">
 
-        <p>
-          A comforting combination of coffee and chocolate.
-        </p>
+          <h3>Mocha</h3>
 
-        <div class="price">
-          ₹170
+          <p>
+            A comforting combination of coffee and chocolate.
+          </p>
+
+          <div class="price">
+            ₹170
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">🥐</div>
+        <div class="food-photo">
+          🥐
+        </div>
 
-        <h3>Butter Croissant</h3>
+        <div class="food-info">
 
-        <p>
-          Flaky, golden and freshly baked.
-        </p>
+          <h3>Butter Croissant</h3>
 
-        <div class="price">
-          ₹120
+          <p>
+            Flaky, golden and freshly baked.
+          </p>
+
+          <div class="price">
+            ₹120
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">🍰</div>
+        <div class="food-photo">
+          🍰
+        </div>
 
-        <h3>Chocolate Cake</h3>
+        <div class="food-info">
 
-        <p>
-          Soft chocolate cake made for sweet moments.
-        </p>
+          <h3>Chocolate Cake</h3>
 
-        <div class="price">
-          ₹180
+          <p>
+            Soft chocolate cake made for sweet moments.
+          </p>
+
+          <div class="price">
+            ₹180
+          </div>
+
         </div>
 
       </div>
 
 
 
-      <div class="card">
+      <div class="food-card">
 
-        <div class="icon">🍪</div>
+        <div class="food-photo">
+          🍪
+        </div>
 
-        <h3>Cookies</h3>
+        <div class="food-info">
 
-        <p>
-          Warm, crunchy and freshly baked.
-        </p>
+          <h3>Cookies</h3>
 
-        <div class="price">
-          ₹90
+          <p>
+            Warm, crunchy and freshly baked.
+          </p>
+
+          <div class="price">
+            ₹90
+          </div>
+
         </div>
 
       </div>
@@ -552,11 +745,12 @@
 
 
 
-  <!-- ABOUT -->
+  <!-- ================= ABOUT ================= -->
 
   <section id="about">
 
-    <div class="about-box">
+
+    <div class="about">
 
       <div class="section-heading">
 
@@ -592,9 +786,10 @@
 
 
 
-  <!-- GALLERY -->
+  <!-- ================= GALLERY ================= -->
 
   <section id="gallery">
+
 
     <div class="section-heading">
 
@@ -608,19 +803,20 @@
     <div class="gallery">
 
 
-      <!-- YOUR UNSPLASH PHOTO -->
-
       <div class="gallery-item">
 
         <img
           src="thanos-pal-buBWIBoYVuY-unsplash.jpg"
-          alt="Cozy café interior"
+          alt="Luna Café interior"
         >
 
       </div>
 
 
-      <!-- OTHER GALLERY BOXES -->
+      <div class="gallery-item">
+        ☕
+      </div>
+
 
       <div class="gallery-item">
         🥐
@@ -638,11 +834,6 @@
 
 
       <div class="gallery-item">
-        📖
-      </div>
-
-
-      <div class="gallery-item">
         🌙
       </div>
 
@@ -653,11 +844,13 @@
 
 
 
-  <!-- CONTACT -->
+  <!-- ================= CONTACT ================= -->
 
   <section id="contact">
 
+
     <div class="contact">
+
 
       <div class="section-heading">
 
@@ -681,6 +874,9 @@
       <p>
         ✉️ hello@lunacafe.com
       </p>
+
+
+      <br>
 
 
       <p>
@@ -723,12 +919,12 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
     <p>
-      ☾ LUNA CAFÉ
+      <strong>☾ LUNA CAFÉ</strong>
     </p>
 
 
