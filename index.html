@@ -3,944 +3,775 @@
 
 <head>
 
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Luna Café | Coffee & Comfort</title>
-
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f3ea;
-      color: #3d2f28;
-      line-height: 1.6;
-    }
-
-
-    /* ================= HEADER ================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #3d2f28;
-      color: white;
-      padding: 18px 20px;
-    }
-
-
-    .nav {
-      max-width: 1150px;
-      margin: auto;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      gap: 20px;
-    }
-
-
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      white-space: nowrap;
-    }
-
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-
-    nav a:hover {
-      opacity: 0.65;
-    }
-
-
-    /* ================= HERO ================= */
-
-    .hero {
-
-      min-height: 88vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      padding: 80px 20px;
-
-      background:
-        linear-gradient(
-          rgba(61,47,40,0.60),
-          rgba(61,47,40,0.60)
-        ),
-        url("thanos-pal-buBWIBoYVuY-unsplash.jpg");
-
-      background-size: cover;
-      background-position: center;
-
-      color: white;
-    }
-
-
-    .hero-content {
-      max-width: 760px;
-    }
-
-
-    .small-title {
-
-      text-transform: uppercase;
-
-      letter-spacing: 4px;
-
-      font-size: 12px;
-
-      margin-bottom: 18px;
-    }
-
-
-    .hero h1 {
-
-      font-family: Georgia, serif;
-
-      font-size: 64px;
-
-      line-height: 1.08;
-
-      margin-bottom: 22px;
-    }
-
-
-    .hero p {
-
-      font-size: 18px;
-
-      max-width: 600px;
-
-      margin: 0 auto 30px;
-    }
-
-
-    /* ================= BUTTONS ================= */
-
-    .button {
-
-      display: inline-block;
-
-      padding: 13px 25px;
-
-      margin: 5px;
-
-      border-radius: 30px;
-
-      text-decoration: none;
-
-      background: white;
-
-      color: #3d2f28;
-
-      font-weight: bold;
-
-      transition: 0.3s;
-    }
-
-
-    .button:hover {
-
-      transform: translateY(-3px);
-
-    }
-
-
-    .button.dark {
-
-      background: #3d2f28;
-
-      color: white;
-
-    }
-
-
-    /* ================= SECTIONS ================= */
-
-    section {
-
-      max-width: 1150px;
-
-      margin: auto;
-
-      padding: 90px 25px;
-    }
-
-
-    .section-heading {
-
-      text-align: center;
-
-      margin-bottom: 45px;
-    }
-
-
-    .section-heading span {
-
-      text-transform: uppercase;
-
-      letter-spacing: 4px;
-
-      font-size: 11px;
-
-      opacity: 0.6;
-    }
-
-
-    .section-heading h2 {
-
-      font-family: Georgia, serif;
-
-      font-size: 42px;
-
-      margin-top: 8px;
-    }
-
-
-    /* ================= MENU ================= */
-
-    .menu {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 22px;
-    }
-
-
-    .food-card {
-
-      background: #eee4d5;
-
-      border-radius: 20px;
-
-      overflow: hidden;
-
-      box-shadow:
-        0 8px 25px rgba(61,47,40,0.08);
-
-      transition: 0.3s;
-    }
-
-
-    .food-card:hover {
-
-      transform: translateY(-5px);
-
-    }
-
-
-    .food-photo {
-
-      height: 210px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: 70px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d8c3aa,
-          #b79c7e
-        );
-    }
-
-
-    .food-info {
-
-      padding: 22px;
-
-    }
-
-
-    .food-info h3 {
-
-      font-family: Georgia, serif;
-
-      font-size: 23px;
-
-      margin-bottom: 7px;
-    }
-
-
-    .food-info p {
-
-      font-size: 14px;
-
-      opacity: 0.72;
-    }
-
-
-    .price {
-
-      margin-top: 14px;
-
-      font-weight: bold;
-
-      font-size: 18px;
-    }
-
-
-    /* ================= ABOUT ================= */
-
-    .about {
-
-      background: #e8ddcd;
-
-      border-radius: 28px;
-
-      padding: 65px 30px;
-
-      text-align: center;
-
-    }
-
-
-    .about p {
-
-      max-width: 700px;
-
-      margin: auto;
-
-      font-size: 16px;
-    }
-
-
-    /* ================= GALLERY ================= */
-
-    .gallery {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 16px;
-    }
-
-
-    .gallery-item {
-
-      height: 210px;
-
-      border-radius: 20px;
-
-      overflow: hidden;
-
-      background: #d8c8b5;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: 65px;
-    }
-
-
-    .gallery-item img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      display: block;
-    }
-
-
-    /* ================= CONTACT ================= */
-
-    .contact {
-
-      background: #e8ddcd;
-
-      border-radius: 28px;
-
-      padding: 65px 25px;
-
-      text-align: center;
-    }
-
-
-    .contact p {
-
-      margin: 8px 0;
-
-    }
-
-
-    /* ================= FOOTER ================= */
-
-    footer {
-
-      background: #3d2f28;
-
-      color: white;
-
-      text-align: center;
-
-      padding: 35px 20px;
-
-      font-size: 14px;
-    }
-
-
-    footer strong {
-
-      font-family: Georgia, serif;
-
-      font-size: 18px;
-    }
-
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 750px) {
-
-
-      .nav {
-
-        flex-direction: column;
-
-      }
-
-
-      nav {
-
-        text-align: center;
-
-      }
-
-
-      nav a {
-
-        margin: 0 5px;
-
-        font-size: 13px;
-
-      }
-
-
-      .hero {
-
-        min-height: 80vh;
-
-      }
-
-
-      .hero h1 {
-
-        font-size: 44px;
-
-      }
-
-
-      .hero p {
-
-        font-size: 16px;
-
-      }
-
-
-      .menu {
-
-        grid-template-columns: 1fr;
-
-      }
-
-
-      .gallery {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
-      }
-
-
-      .gallery-item {
-
-        height: 160px;
-
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Café | Coffee & Comfort</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f3ea;
+  color: #3d2f28;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #3d2f28;
+  color: white;
+  padding: 18px 20px;
+}
+
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      rgba(61,47,40,0.58),
+      rgba(61,47,40,0.58)
+    ),
+    url("thanos-pal-buBWIBoYVuY-unsplash.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.small-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 62px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  padding: 13px 25px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  background: white;
+  color: #3d2f28;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button.dark {
+  background: #3d2f28;
+  color: white;
+}
+
+/* SECTIONS */
+
+section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 90px 25px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading span {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  margin-top: 8px;
+}
+
+/* MENU */
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.food-card {
+  background: #eee4d5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(61,47,40,0.08);
+  transition: 0.3s;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-photo {
+  height: 230px;
+  overflow: hidden;
+  background: #d8c3aa;
+}
+
+.food-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.food-info {
+  padding: 22px;
+}
+
+.food-info h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+.food-info p {
+  font-size: 14px;
+  opacity: 0.72;
+}
+
+.price {
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ABOUT */
+
+.about {
+  background: #e8ddcd;
+  border-radius: 28px;
+  padding: 65px 30px;
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-item {
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #d8c8b5;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #e8ddcd;
+  border-radius: 28px;
+  padding: 65px 25px;
+  text-align: center;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+/* FOOTER */
+
+footer {
+  background: #3d2f28;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 14px;
+}
+
+footer strong {
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  .nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item {
+    height: 170px;
+  }
+
+}
+
+</style>
 
 </head>
-
 
 <body>
 
 
-  <!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-  <header>
+<header>
 
-    <div class="nav">
+<div class="nav">
 
-      <div class="logo">
-        ☾ LUNA CAFÉ
-      </div>
+<div class="logo">
+☾ LUNA CAFÉ
+</div>
 
+<nav>
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
 
-      <nav>
+</div>
 
-        <a href="#home">Home</a>
+</header>
 
-        <a href="#menu">Menu</a>
 
-        <a href="#about">About</a>
+<!-- HERO -->
 
-        <a href="#gallery">Gallery</a>
+<section class="hero" id="home">
 
-        <a href="#contact">Contact</a>
+<div class="hero-content">
 
-      </nav>
+<div class="small-title">
+Coffee • Comfort • Little Moments
+</div>
 
-    </div>
+<h1>
+Your little corner<br>
+of calm.
+</h1>
 
-  </header>
+<p>
+Slow mornings, warm coffee and something sweet.
+Welcome to Luna Café.
+</p>
 
+<a href="#menu" class="button">
+Explore Menu
+</a>
 
+<a href="#contact" class="button dark">
+Find Us
+</a>
 
-  <!-- ================= HERO ================= -->
+</div>
 
-  <section class="hero" id="home">
+</section>
 
-    <div class="hero-content">
 
-      <div class="small-title">
-        Coffee • Comfort • Little Moments
-      </div>
+<!-- MENU -->
 
+<section id="menu">
 
-      <h1>
-        Your little corner
-        of calm.
-      </h1>
+<div class="section-heading">
 
+<span>Made with care</span>
 
-      <p>
-        Slow mornings, warm coffee and something sweet.
-        Welcome to Luna Café.
-      </p>
+<h2>Our Menu</h2>
 
+</div>
 
-      <a href="#menu" class="button">
-        Explore Menu
-      </a>
 
+<div class="menu">
 
-      <a href="#contact" class="button dark">
-        Find Us
-      </a>
 
-    </div>
+<!-- CAPPUCCINO -->
 
-  </section>
+<div class="food-card">
 
+<div class="food-photo">
 
+<img
+src="625906c47cf0cc6a0d3ea79b8bb065b7.jpg"
+alt="Cappuccino"
+>
 
-  <!-- ================= MENU ================= -->
+</div>
 
-  <section id="menu">
+<div class="food-info">
 
+<h3>Cappuccino</h3>
 
-    <div class="section-heading">
+<p>
+Rich espresso topped with smooth creamy foam.
+</p>
 
-      <span>Made with care</span>
+<div class="price">
+₹140
+</div>
 
-      <h2>Our Menu</h2>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="menu">
+<!-- LATTE -->
 
+<div class="food-card">
 
-      <div class="food-card">
+<div class="food-photo">
 
-        <div class="food-photo">
-          ☕
-        </div>
+<img
+src="e5055fdd76c7c001e2550e6df13a7915.jpg"
+alt="Café Latte"
+>
 
-        <div class="food-info">
+</div>
 
-          <h3>Cappuccino</h3>
+<div class="food-info">
 
-          <p>
-            Rich espresso topped with smooth creamy foam.
-          </p>
+<h3>Café Latte</h3>
 
-          <div class="price">
-            ₹140
-          </div>
+<p>
+Silky steamed milk blended with smooth espresso.
+</p>
 
-        </div>
+<div class="price">
+₹150
+</div>
 
-      </div>
+</div>
 
+</div>
 
 
-      <div class="food-card">
+<!-- MOCHA -->
 
-        <div class="food-photo">
-          🥛
-        </div>
+<div class="food-card">
 
-        <div class="food-info">
+<div class="food-photo">
 
-          <h3>Café Latte</h3>
+<img
+src="f134bc5cbbd476bedd9b104897835d60.jpg"
+alt="Mocha"
+>
 
-          <p>
-            Silky steamed milk blended with smooth espresso.
-          </p>
+</div>
 
-          <div class="price">
-            ₹150
-          </div>
+<div class="food-info">
 
-        </div>
+<h3>Mocha</h3>
 
-      </div>
+<p>
+A comforting combination of coffee and chocolate.
+</p>
 
+<div class="price">
+₹170
+</div>
 
+</div>
 
-      <div class="food-card">
+</div>
 
-        <div class="food-photo">
-          🍫
-        </div>
 
-        <div class="food-info">
+<!-- CROISSANT -->
 
-          <h3>Mocha</h3>
+<div class="food-card">
 
-          <p>
-            A comforting combination of coffee and chocolate.
-          </p>
+<div class="food-photo">
 
-          <div class="price">
-            ₹170
-          </div>
+<img
+src="8e009afbac8bafbe9aace096751850be.jpg"
+alt="Butter Croissant"
+>
 
-        </div>
+</div>
 
-      </div>
+<div class="food-info">
 
+<h3>Butter Croissant</h3>
 
+<p>
+Flaky, golden and freshly baked.
+</p>
 
-      <div class="food-card">
+<div class="price">
+₹120
+</div>
 
-        <div class="food-photo">
-          🥐
-        </div>
+</div>
 
-        <div class="food-info">
+</div>
 
-          <h3>Butter Croissant</h3>
 
-          <p>
-            Flaky, golden and freshly baked.
-          </p>
+<!-- CHOCOLATE CAKE -->
 
-          <div class="price">
-            ₹120
-          </div>
+<div class="food-card">
 
-        </div>
+<div class="food-photo">
 
-      </div>
+<img
+src="e594d45b9cdbd4f154c81cd42f726b70.jpg"
+alt="Chocolate Cake"
+>
 
+</div>
 
+<div class="food-info">
 
-      <div class="food-card">
+<h3>Chocolate Cake</h3>
 
-        <div class="food-photo">
-          🍰
-        </div>
+<p>
+Soft chocolate cake made for sweet moments.
+</p>
 
-        <div class="food-info">
+<div class="price">
+₹180
+</div>
 
-          <h3>Chocolate Cake</h3>
+</div>
 
-          <p>
-            Soft chocolate cake made for sweet moments.
-          </p>
+</div>
 
-          <div class="price">
-            ₹180
-          </div>
 
-        </div>
+<!-- COOKIES -->
 
-      </div>
+<div class="food-card">
 
+<div class="food-photo">
 
+<img
+src="cb87cfec282b26133877c3b86869249d.jpg"
+alt="Cookies"
+>
 
-      <div class="food-card">
+</div>
 
-        <div class="food-photo">
-          🍪
-        </div>
+<div class="food-info">
 
-        <div class="food-info">
+<h3>Cookies</h3>
 
-          <h3>Cookies</h3>
+<p>
+Warm, crunchy and freshly baked.
+</p>
 
-          <p>
-            Warm, crunchy and freshly baked.
-          </p>
+<div class="price">
+₹90
+</div>
 
-          <div class="price">
-            ₹90
-          </div>
+</div>
 
-        </div>
+</div>
 
-      </div>
 
+</div>
 
-    </div>
+</section>
 
-  </section>
 
+<!-- ABOUT -->
 
+<section id="about">
 
-  <!-- ================= ABOUT ================= -->
+<div class="about">
 
-  <section id="about">
+<div class="section-heading">
 
+<span>A little about us</span>
 
-    <div class="about">
+<h2>Our Story</h2>
 
-      <div class="section-heading">
+</div>
 
-        <span>A little about us</span>
+<p>
 
-        <h2>Our Story</h2>
+Luna Café was created as a cozy little escape
+from busy days.
 
-      </div>
+We believe that a good cup of coffee,
+a delicious treat and a peaceful place can
+turn an ordinary moment into something special.
 
+</p>
 
-      <p>
+<br>
 
-        Luna Café was created as a cozy little escape
-        from busy days.
+<p>
+Come in, slow down and stay awhile. 🌙
+</p>
 
-        We believe that a good cup of coffee,
-        a delicious treat and a peaceful place can
-        turn an ordinary moment into something special.
+</div>
 
-      </p>
+</section>
 
 
-      <br>
+<!-- GALLERY -->
 
+<section id="gallery">
 
-      <p>
-        Come in, slow down and stay awhile. 🌙
-      </p>
+<div class="section-heading">
 
-    </div>
+<span>A taste of Luna</span>
 
-  </section>
+<h2>Our Gallery</h2>
 
+</div>
 
 
-  <!-- ================= GALLERY ================= -->
+<div class="gallery">
 
-  <section id="gallery">
 
+<!-- GALLERY PHOTO 1 -->
 
-    <div class="section-heading">
+<div class="gallery-item">
 
-      <span>A taste of Luna</span>
+<img
+src="42deebb7733915be87d80be0113d1015.jpg"
+alt="Luna Café"
+>
 
-      <h2>Our Space</h2>
+</div>
 
-    </div>
 
+<!-- GALLERY PHOTO 2 -->
 
-    <div class="gallery">
+<div class="gallery-item">
 
+<img
+src="48b93dd7d619f5f614e3e7e9f8e4fe06.jpg"
+alt="Luna Café"
+>
 
-      <div class="gallery-item">
+</div>
 
-        <img
-          src="thanos-pal-buBWIBoYVuY-unsplash.jpg"
-          alt="Luna Café interior"
-        >
 
-      </div>
+<!-- GALLERY PHOTO 3 -->
 
+<div class="gallery-item">
 
-      <div class="gallery-item">
-        ☕
-      </div>
+<img
+src="523250bbaaebc05b3c9164bb106fb960.jpg"
+alt="Luna Café"
+>
 
+</div>
 
-      <div class="gallery-item">
-        🥐
-      </div>
 
+<!-- GALLERY PHOTO 4 -->
 
-      <div class="gallery-item">
-        🍰
-      </div>
+<div class="gallery-item">
 
+<img
+src="800fb4ba8ed3726c559f6a65330f0f5c.jpg"
+alt="Luna Café"
+>
 
-      <div class="gallery-item">
-        🌿
-      </div>
+</div>
 
 
-      <div class="gallery-item">
-        🌙
-      </div>
+<!-- GALLERY PHOTO 5 -->
 
+<div class="gallery-item">
 
-    </div>
+<img
+src="ba3e43a402b95a43dcb4840561520615.jpg"
+alt="Luna Café"
+>
 
-  </section>
+</div>
 
 
+<!-- GALLERY PHOTO 6 -->
 
-  <!-- ================= CONTACT ================= -->
+<div class="gallery-item">
 
-  <section id="contact">
+<img
+src="eda15020b26a6d8c36c98a151b44f90d.jpg"
+alt="Luna Café"
+>
 
+</div>
 
-    <div class="contact">
 
+</div>
 
-      <div class="section-heading">
+</section>
 
-        <span>Come say hello</span>
 
-        <h2>Visit Luna</h2>
+<!-- CONTACT -->
 
-      </div>
+<section id="contact">
 
+<div class="contact">
 
-      <p>
-        📍 Bijni, Assam
-      </p>
+<div class="section-heading">
 
+<span>Come say hello</span>
 
-      <p>
-        📞 +91 99999 99999
-      </p>
+<h2>Visit Luna</h2>
 
+</div>
 
-      <p>
-        ✉️ hello@lunacafe.com
-      </p>
+<p>📍 Bijni, Assam</p>
 
+<p>📞 +91 99999 99999</p>
 
-      <br>
+<p>✉️ hello@lunacafe.com</p>
 
+<br>
 
-      <p>
-        🕐 Mon–Fri: 9:00 AM – 9:00 PM
-      </p>
+<p>🕐 Mon–Fri: 9:00 AM – 9:00 PM</p>
 
+<p>🕐 Saturday: 9:00 AM – 10:00 PM</p>
 
-      <p>
-        🕐 Saturday: 9:00 AM – 10:00 PM
-      </p>
+<p>🕐 Sunday: 10:00 AM – 8:00 PM</p>
 
+<br>
 
-      <p>
-        🕐 Sunday: 10:00 AM – 8:00 PM
-      </p>
+<a
+href="https://wa.me/919999999999"
+class="button dark"
+>
+WhatsApp Us
+</a>
 
+<a
+href="tel:+919999999999"
+class="button"
+>
+Call Now
+</a>
 
-      <br>
+</div>
 
+</section>
 
-      <a
-        href="https://wa.me/919999999999"
-        class="button dark"
-      >
-        WhatsApp Us
-      </a>
 
+<!-- FOOTER -->
 
-      <a
-        href="tel:+919999999999"
-        class="button"
-      >
-        Call Now
-      </a>
+<footer>
 
+<p>
+<strong>☾ LUNA CAFÉ</strong>
+</p>
 
-    </div>
+<p>
+Coffee • Comfort • Little Moments
+</p>
 
-  </section>
+<br>
 
+<p>
+© 2026 Luna Café. Demo website.
+</p>
 
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <p>
-      <strong>☾ LUNA CAFÉ</strong>
-    </p>
-
-
-    <p>
-      Coffee • Comfort • Little Moments
-    </p>
-
-
-    <br>
-
-
-    <p>
-      © 2026 Luna Café. Demo website.
-    </p>
-
-  </footer>
+</footer>
 
 
 </body>
